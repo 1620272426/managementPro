@@ -31,7 +31,6 @@ public class RegionController {
 	  @RequestMapping("regionList")
 	  public Result getRegionList(@RequestBody Region region){
 			List<Region> regions = regionService.query(region);
-			System.out.println(regions);
 			return Result.ok().data("regionList",regions);
 	  }
 
